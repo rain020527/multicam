@@ -1,0 +1,10 @@
+﻿  ApiController.cpp
+  CameraObserver.cpp
+  FrameObserver.cpp
+  MutiCam.cpp
+  main.cpp
+c:\users\administrator\source\repos\test2\test2\cameraobserver.cpp(29): fatal error C1083: 無法開啟包含檔案: 'CameraObserver.h': No such file or directory
+c:\users\administrator\source\repos\test2\test2\frameobserver.cpp(29): fatal error C1083: 無法開啟包含檔案: 'FrameObserver.h': No such file or directory
+c:\users\administrator\source\repos\test2\test2\apicontroller.h(35): fatal error C1083: 無法開啟包含檔案: 'VimbaCPP/Include/VimbaCPP.h': No such file or directory (正在編譯原始程式檔 ApiController.cpp)
+c:\users\administrator\source\repos\test2\test2\muticam.h(7): fatal error C1083: 無法開啟包含檔案: 'VimbaCPP/Include/VimbaCPP.h': No such file or directory (正在編譯原始程式檔 main.cpp)
+c:\users\administrator\source\repos\test2\test2\muticam.h(7): fatal error C1083: 無法開啟包含檔案: 'VimbaCPP/Include/VimbaCPP.h': No such file or directory (正在編譯原始程式檔 MutiCam.cpp)

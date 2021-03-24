@@ -1,0 +1,7 @@
+﻿  OpenCVVideoRecorder.cpp
+c:\opencv\build\include\opencv2\calib3d.hpp : warning C4819: 檔案含有無法在目前字碼頁 (950) 中表示的字元。請以 Unicode 格式儲存檔案以防止資料遺失
+  moc_MutiCam.cpp
+  moc_OpenCVVideoRecorder.cpp
+c:\opencv\build\include\opencv2\calib3d.hpp : warning C4819: 檔案含有無法在目前字碼頁 (950) 中表示的字元。請以 Unicode 格式儲存檔案以防止資料遺失 (正在編譯原始程式檔 x64\Debug\moc\moc_OpenCVVideoRecorder.cpp)
+c:\opencv\build\include\opencv2\calib3d.hpp : warning C4819: 檔案含有無法在目前字碼頁 (950) 中表示的字元。請以 Unicode 格式儲存檔案以防止資料遺失 (正在編譯原始程式檔 x64\Debug\moc\moc_MutiCam.cpp)
+  test2.vcxproj -> C:\Users\Administrator\source\repos\test2\x64\Debug\test2.exe

@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{4D684243-5275-4238-B1D5-9EBAEFBA7F45}</ProjectGuid>
+    <Keyword>QtVS_v303</Keyword>
+    <WindowsTargetPlatformVersion Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">10.0.17763.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">10.0.17763.0</WindowsTargetPlatformVersion>
+    <QtMsBuild Condition="'$(QtMsBuild)'=='' OR !Exists('$(QtMsBuild)\qt.targets')">$(MSBuildProjectDirectory)\QtMsBuild</QtMsBuild>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <Target Name="QtMsBuildNotFound" BeforeTargets="CustomBuild;ClCompile" Condition="!Exists('$(QtMsBuild)\qt.targets') or !Exists('$(QtMsBuild)\qt.props')">
+    <Message Importance="High" Text="QtMsBuild: could not locate qt.targets, qt.props; project may not build correctly." />
+  </Target>
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Label="Shared" />
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <ImportGroup Condition="Exists('$(QtMsBuild)\qt_defaults.props')">
+    <Import Project="$(QtMsBuild)\qt_defaults.props" />
+  </ImportGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>./;C:\opencv\build\include;C:\Program Files\Allied Vision\Vimba_4.0;C:\Qt\5.14.2\msvc2017_64\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <AdditionalLibraryDirectories>C:\opencv\build\x64\vc15\lib;C:\Program Files\Allied Vision\Vimba_4.0\VimbaImageTransform\Lib\Win64;C:\Program Files\Allied Vision\Vimba_4.0\VimbaC\Lib\Win64;C:\Program Files\Allied Vision\Vimba_4.0\VimbaCPP\Lib\Win64;C:\Qt\5.14.2\msvc2017_64\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>opencv_world3412d.lib;VimbaC.lib;VimbaCPP.lib;VimbaImageTransform.lib;$(Qt_LIBS_);libEGL.lib;libEGLd.lib;libGLESv2.lib;libGLESv2d.lib;Qt53DAnimation.lib;Qt53DAnimationd.lib;Qt53DCore.lib;Qt53DCored.lib;Qt53DExtras.lib;Qt53DExtrasd.lib;Qt53DInput.lib;Qt53DInputd.lib;Qt53DLogic.lib;Qt53DLogicd.lib;Qt53DQuick.lib;Qt53DQuickAnimation.lib;Qt53DQuickAnimationd.lib;Qt53DQuickd.lib;Qt53DQuickExtras.lib;Qt53DQuickExtrasd.lib;Qt53DQuickInput.lib;Qt53DQuickInputd.lib;Qt53DQuickRender.lib;Qt53DQuickRenderd.lib;Qt53DQuickScene2D.lib;Qt53DQuickScene2Dd.lib;Qt53DRender.lib;Qt53DRenderd.lib;Qt5AccessibilitySupport.lib;Qt5AccessibilitySupportd.lib;Qt5AxBase.lib;Qt5AxBased.lib;Qt5AxContainer.lib;Qt5AxContainerd.lib;Qt5AxServer.lib;Qt5AxServerd.lib;Qt5Bluetooth.lib;Qt5Bluetoothd.lib;Qt5Bootstrap.lib;Qt5Charts.lib;Qt5Chartsd.lib;Qt5Concurrent.lib;Qt5Concurrentd.lib;Qt5Core.lib;Qt5Cored.lib;Qt5DataVisualization.lib;Qt5DataVisualizationd.lib;Qt5DBus.lib;Qt5DBusd.lib;Qt5Designer.lib;Qt5DesignerComponents.lib;Qt5DesignerComponentsd.lib;Qt5Designerd.lib;Qt5DeviceDiscoverySupport.lib;Qt5DeviceDiscoverySupportd.lib;Qt5EdidSupport.lib;Qt5EdidSupportd.lib;Qt5EglSupport.lib;Qt5EglSupportd.lib;Qt5EventDispatcherSupport.lib;Qt5EventDispatcherSupportd.lib;Qt5FbSupport.lib;Qt5FbSupportd.lib;Qt5FontDatabaseSupport.lib;Qt5FontDatabaseSupportd.lib;Qt5Gamepad.lib;Qt5Gamepadd.lib;Qt5Gui.lib;Qt5Guid.lib;Qt5Help.lib;Qt5Helpd.lib;Qt5Location.lib;Qt5Locationd.lib;Qt5Multimedia.lib;Qt5Multimediad.lib;Qt5MultimediaQuick.lib;Qt5MultimediaQuickd.lib;Qt5MultimediaWidgets.lib;Qt5MultimediaWidgetsd.lib;Qt5Network.lib;Qt5Networkd.lib;Qt5Nfc.lib;Qt5Nfcd.lib;Qt5OpenGL.lib;Qt5OpenGLd.lib;Qt5OpenGLExtensions.lib;Qt5OpenGLExtensionsd.lib;Qt5PacketProtocol.lib;Qt5PacketProtocold.lib;Qt5PlatformCompositorSupport.lib;Qt5PlatformCompositorSupportd.lib;Qt5Positioning.lib;Qt5Positioningd.lib;Qt5PositioningQuick.lib;Qt5PositioningQuickd.lib;Qt5PrintSupport.lib;Qt5PrintSupportd.lib;Qt5Qml.lib;Qt5Qmld.lib;Qt5QmlDebug.lib;Qt5QmlDebugd.lib;Qt5QmlDevTools.lib;Qt5QmlModels.lib;Qt5QmlModelsd.lib;Qt5QmlWorkerScript.lib;Qt5QmlWorkerScriptd.lib;Qt5Quick.lib;Qt5QuickControls2.lib;Qt5QuickControls2d.lib;Qt5Quickd.lib;Qt5QuickParticles.lib;Qt5QuickParticlesd.lib;Qt5QuickShapes.lib;Qt5QuickShapesd.lib;Qt5QuickTemplates2.lib;Qt5QuickTemplates2d.lib;Qt5QuickTest.lib;Qt5QuickTestd.lib;Qt5QuickWidgets.lib;Qt5QuickWidgetsd.lib;Qt5RemoteObjects.lib;Qt5RemoteObjectsd.lib;Qt5Scxml.lib;Qt5Scxmld.lib;Qt5Sensors.lib;Qt5Sensorsd.lib;Qt5SerialBus.lib;Qt5SerialBusd.lib;Qt5SerialPort.lib;Qt5SerialPortd.lib;Qt5Sql.lib;Qt5Sqld.lib;Qt5Svg.lib;Qt5Svgd.lib;Qt5Test.lib;Qt5Testd.lib;Qt5TextToSpeech.lib;Qt5TextToSpeechd.lib;Qt5ThemeSupport.lib;Qt5ThemeSupportd.lib;Qt5UiTools.lib;Qt5UiToolsd.lib;Qt5VulkanSupport.lib;Qt5VulkanSupportd.lib;Qt5WebChannel.lib;Qt5WebChanneld.lib;Qt5WebSockets.lib;Qt5WebSocketsd.lib;Qt5WebView.lib;Qt5WebViewd.lib;Qt5Widgets.lib;Qt5Widgetsd.lib;Qt5WindowsUIAutomationSupport.lib;Qt5WindowsUIAutomationSupportd.lib;Qt5WinExtras.lib;Qt5WinExtrasd.lib;Qt5Xml.lib;Qt5Xmld.lib;Qt5XmlPatterns.lib;Qt5XmlPatternsd.lib;qtfreetype.lib;qtfreetyped.lib;qtlibpng.lib;qtlibpngd.lib;qtmain.lib;qtmaind.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'" Label="QtSettings">
+    <QtInstall>5.14.2_msvc2017_64</QtInstall>
+    <QtModules>core;gui;widgets</QtModules>
+    <QtBuildConfig>debug</QtBuildConfig>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'" Label="QtSettings">
+    <QtInstall>msvc2017_64</QtInstall>
+    <QtModules>core;gui;widgets</QtModules>
+    <QtBuildConfig>release</QtBuildConfig>
+  </PropertyGroup>
+  <ImportGroup Condition="Exists('$(QtMsBuild)\qt.props')">
+    <Import Project="$(QtMsBuild)\qt.props" />
+  </ImportGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'" Label="Configuration">
+    <ClCompile>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <Optimization>Disabled</Optimization>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'" Label="Configuration">
+    <ClCompile>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <DebugInformationFormat>None</DebugInformationFormat>
+      <Optimization>MaxSpeed</Optimization>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="OpenCVVideoRecorder.cpp">
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">input</DynamicSource>
+      <QtMocFileName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(Filename).moc</QtMocFileName>
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Release|x64'">input</DynamicSource>
+      <QtMocFileName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(Filename).moc</QtMocFileName>
+    </ClCompile>
+    <ClCompile Include="timercpp.cpp" />
+    <QtRcc Include="MutiCam.qrc" />
+    <QtUic Include="MutiCam.ui" />
+    <QtMoc Include="MutiCam.h" />
+    <ClCompile Include="ApiController.cpp" />
+    <ClCompile Include="CameraObserver.cpp" />
+    <ClCompile Include="FrameObserver.cpp" />
+    <ClCompile Include="MutiCam.cpp" />
+    <ClCompile Include="main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ApiController.h" />
+    <ClInclude Include="timercpp.h" />
+    <QtMoc Include="OpenCVVideoRecorder.h" />
+    <QtMoc Include="FrameObserver.h" />
+    <QtMoc Include="CameraObserver.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram.cd" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">
+    <Import Project="$(QtMsBuild)\qt.targets" />
+  </ImportGroup>
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
